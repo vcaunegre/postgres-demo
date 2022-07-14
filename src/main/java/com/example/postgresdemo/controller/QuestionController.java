@@ -40,7 +40,7 @@ public class QuestionController {
             question.setTitle(questionRequest.getTitle());
             question.setDescription(questionRequest.getDescription());
             return questionRepository.save(question);
-        }).orElseThrow(()->new ResourceNotFoundException(("Question not found with id "+ questionId));
+        }).orElseThrow(() -> new ResourceNotFoundException("Question not found with id " + questionId));
     }
 
     @DeleteMapping("/questions/{questionId}")
